@@ -209,18 +209,50 @@ body {
     z-index: 10;
 }
 
-.garary_2{
+.space{
     width: 100%;
-    height: 700px;
+    height: 200px;
     background-color: black;
-    display: flex;
 }
 
-.garary_2img{
-    border: 1px solid white;
-    width: 40%;
-    height: 600px;
-    margin: 30px;
+.interactive{
+    width: 100%;
+    height: 700px;
+    background-image: url(../img/museum-g2870471b0_1280.jpg);
+    background-size: cover;
+    overflow: scroll;
+}
+
+
+.interactive_1{
+    margin-bottom: 300px;
+    width: 100%;
+    height: 700px;
+    background-image: url(../img/museum-g4ec896274_1280.jpg);
+    background-size: cover;
+}
+
+.interactive_2{
+    margin-bottom: 300px;
+    width: 100%;
+    height: 700px;
+    background-image: url(../img/cubes-gaa4e2d15f_1280.jpg);
+    background-size: cover;
+}
+
+.interactive_3{
+    margin-bottom: 300px;
+    width: 100%;
+    height: 700px;
+    background-image: url(../img/controller-gba13abf1a_1280.jpg);
+    background-size: cover;
+}
+
+.interactive_4{
+    width: 100%;
+    height: 700px;
+    background-image: url(../img/exhibition-g97107e690_1280.jpg);
+    background-size: cover;
 }
 
 .button_wrap{
@@ -235,22 +267,6 @@ body {
 .button{
     text-align: center;
     margin-top: 50%;
-}
-
-.interactive{
-    width: 100%;
-    height: 400px;
-    background-color: darkgray;
-    display: flex;
-    justify-content: space-around;
-    padding-top: 50px;
-}
-
-
-#AR, #bijutukan, #matigaisagasi{
-    width: 300px;
-    height: 300px;
-    border: 1px solid; 
 }
 
 footer{
