@@ -27,8 +27,8 @@ function init() {
     camera.position.set(0, 0, +1000);
 
     // 箱を作成
-    const geometry = new THREE.DodecahedronGeometry(300, 0);
-    const material = new THREE.MeshPhongMaterial();
+    const geometry = new THREE.SphereGeometry(250, 50, 50);
+    const material = new THREE.MeshPhongMaterial({color: '#020826'});
     material.alphaToCoverage = true;
     const mesh = new THREE.Mesh(geometry, material);
     scene.add(mesh);
@@ -54,3 +54,4 @@ function init() {
     renderer.render(scene, camera);
     }
 }
+

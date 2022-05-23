@@ -1,23 +1,191 @@
+body{
+    background-color: black;
+}
+
+
+/* //オープニングの扉 */
+.opening{
+height: 700px;
+}
+
+li {
+    display: flex;
+    width: 1000px;
+    height: 600px;
+    box-sizing: border-box;
+    box-shadow: 1px 2px 3px #bbb;
+    -webkit-perspective: 800px;
+    perspective: 800px;
+}
+
+.door-left, .door-right {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+    z-index: 1;
+    transition: 1s ease-in;
+    background: linear-gradient(to bottom right, rgba(216,237,255,0.2) 0%, rgba(255,255,255,0.2) 50%, rgba(216,237,255,0.2) 100%);
+}
+
+.door-left {
+    border: 0.5px solid #aaa;
+    transform-origin: left; /* マウスオーバーした時の回転軸をここで指定 */
+}
+
+.door-right {
+    border: 0.5px solid #aaa;
+    transform-origin: right;
+}
+
+  /* ドアノブ */
+/* .door-knob {
+    position: absolute;
+    top: 45px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    content: "";
+    background: linear-gradient(135deg, rgb(137,121,108) 0%,rgb(137,121,108) 0%,rgb(137,121,108) 0%,rgb(242,240,227) 50%,rgb(137,121,108) 100%); 
+    filter: drop-shadow(1px 1px 1px #444);
+    z-index: 3;
+} */
+
+.door-left .door-knob {
+    right: 7px;
+}
+
+.door-right .door-knob {
+    left: 7px;
+}
+
+.name, .img-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.name {
+    padding: 2.5%;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 0.5em;
+    color: #666;
+    text-shadow: 0.5px 0.5px 0.5px #fff;
+    z-index: 2; /* 扉を開いても表示させる */
+}
+
+.phrase {
+    width: 140%;
+    height: 50px;
+    font-size: 10px;
+    font-family: serif;
+    line-height: 1.3;
+    transform: scale(0.65) translate(-20%, 70px);
+}
+
+.img-box {
+    opacity: 0.1;
+    transition: all 1s ease 0.5s;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d; /* 子要素を3D空間 */
+}
+
+img {
+    width: 100px; /* 画像は正方形に成形済み */
+    height: 100%;
+}
+
+li:hover .door-left {
+    transform: rotate3d(0, 1, 0, -110deg); /* 扉の開く角度 */
+    transition: all 1s ease-in-out 0s;
+}
+
+li:hover .door-right {
+    transform: rotate3d(0, 1, 0, 110deg);
+    transition: all 1s ease-in-out 0s;
+}
+
+li:hover .img-box {
+    opacity: 10;
+}
+
+
+/* メイン */
+.main{
+    width: 100%;
+    height: 700px;
+    background-color: black;
+    background-size: cover;
+    border: 1px solid;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 300px;
+}
+
+
+
+.tops{
+    width: 100%;
+    height: 350px;
+    background-color: rgb(238, 235, 88);
+    display: inline-block;       /* 奥行表示のためのブロック化 */
+  transform: perspective(400px)  /* 深さ */
+            rotateX(-45deg);     /* 角度 */
+}
+
+.bottoms{
+    width: 100%;
+    height: 350px;
+    background-image: url(../img/contents_img/striped-gd350bc8f8_1280.png);
+    display: inline-block;       /* 奥行表示のためのブロック化 */
+  transform: perspective(400px)  /* 深さ */
+            rotateX(45deg);     /* 角度 */
+}
+
+.bottoms::before{
+    content: '';
+    background-color: rgba(0,0,0,0.3);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+}
+
+canvas{
+    border: 1px solid;
+    position: absolute;
+    top: 100px;
+    left: 250px;
+    z-index: 10;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 header{
     width: 100%;
     height: 100px;
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-.main{
-    width: 100%;
-    display: inline-block;
-    height: 700px;
-    border: 1px solid;
-    background-color: rgb(182, 130, 130);
-    /* background-size: cover; */
-    
-}
 
-canvas{
-    border: 1px solid;
-}
-
+/* 斜めデザイン */
 .naname{
     width: 100%;
     height: 700px;
@@ -244,7 +412,7 @@ body {
     margin-bottom: 300px;
     width: 100%;
     height: 700px;
-    background-image: url(../img/controller-gba13abf1a_1280.jpg);
+    /* background-image: url(../img/controller-gba13abf1a_1280.jpg); */
     background-size: cover;
 }
 
