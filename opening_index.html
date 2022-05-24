@@ -15,11 +15,23 @@
             <div class="door-right">
             </div>
             <div class="img-box">
-                <a href="./index.html"><button>go!</button></a>
-                <img src="./img/wall-g943320ce4_1280.jpg" alt="pug-1">
+                <button id="button">enter</button>
+                <img src="./img/contents_img/castle-g9903df742_640.jpg" alt="">
             </div>
         </li>
     </div>
     
+    <script src="./js/library/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            $("#button").on("click",function(){
+                $("body").fadeOut(1200);
+                setTimeout(function(){
+                    window.location.href = "./index.html"  
+                },1500);
+            });
+        });
+        
+    </script>
 </body>
 </html>

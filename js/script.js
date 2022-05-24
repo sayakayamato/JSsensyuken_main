@@ -1,3 +1,7 @@
+$(function(){
+    $("body").fadeIn(2000);
+})
+
 //斜めスライダー
 document.addEventListener('DOMContentLoaded', function() {
     var parent = document.querySelector('.splitview'),
