@@ -4,113 +4,6 @@ body{
 
 
 /* //オープニングの扉 */
-.opening{
-height: 700px;
-}
-
-li {
-    display: flex;
-    width: 1000px;
-    height: 600px;
-    box-sizing: border-box;
-    box-shadow: 1px 2px 3px #bbb;
-    -webkit-perspective: 800px;
-    perspective: 800px;
-}
-
-.door-left, .door-right {
-    position: relative;
-    width: 50%;
-    height: 100%;
-    box-sizing: border-box;
-    z-index: 1;
-    transition: 1s ease-in;
-    background: linear-gradient(to bottom right, rgba(216,237,255,0.2) 0%, rgba(255,255,255,0.2) 50%, rgba(216,237,255,0.2) 100%);
-}
-
-.door-left {
-    border: 0.5px solid #aaa;
-    transform-origin: left; /* マウスオーバーした時の回転軸をここで指定 */
-}
-
-.door-right {
-    border: 0.5px solid #aaa;
-    transform-origin: right;
-}
-
-  /* ドアノブ */
-/* .door-knob {
-    position: absolute;
-    top: 45px;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    content: "";
-    background: linear-gradient(135deg, rgb(137,121,108) 0%,rgb(137,121,108) 0%,rgb(137,121,108) 0%,rgb(242,240,227) 50%,rgb(137,121,108) 100%); 
-    filter: drop-shadow(1px 1px 1px #444);
-    z-index: 3;
-} */
-
-.door-left .door-knob {
-    right: 7px;
-}
-
-.door-right .door-knob {
-    left: 7px;
-}
-
-.name, .img-box {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.name {
-    padding: 2.5%;
-    box-sizing: border-box;
-    text-align: center;
-    font-size: 0.5em;
-    color: #666;
-    text-shadow: 0.5px 0.5px 0.5px #fff;
-    z-index: 2; /* 扉を開いても表示させる */
-}
-
-.phrase {
-    width: 140%;
-    height: 50px;
-    font-size: 10px;
-    font-family: serif;
-    line-height: 1.3;
-    transform: scale(0.65) translate(-20%, 70px);
-}
-
-.img-box {
-    opacity: 0.1;
-    transition: all 1s ease 0.5s;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d; /* 子要素を3D空間 */
-}
-
-img {
-    width: 100px; /* 画像は正方形に成形済み */
-    height: 100%;
-}
-
-li:hover .door-left {
-    transform: rotate3d(0, 1, 0, -110deg); /* 扉の開く角度 */
-    transition: all 1s ease-in-out 0s;
-}
-
-li:hover .door-right {
-    transform: rotate3d(0, 1, 0, 110deg);
-    transition: all 1s ease-in-out 0s;
-}
-
-li:hover .img-box {
-    opacity: 10;
-}
 
 
 /* メイン */
@@ -136,10 +29,28 @@ li:hover .img-box {
             rotateX(-45deg);     /* 角度 */
 }
 
+.tops::before{
+    content: '';
+    background-color: rgba(0,0,0,0.3);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.text{
+    font-family: 'Gurmukhi MN',sans-serif;
+    font-size: 50px;
+    color: #fff;
+    text-shadow: 10px 10px rgb(242, 120, 120);
+}
+
 .bottoms{
     width: 100%;
     height: 350px;
-    background-image: url(../img/contents_img/striped-gd350bc8f8_1280.png);
+    background-image: url(../img/abstract-art-gce0b0f09f_640.jpg);
     display: inline-block;       /* 奥行表示のためのブロック化 */
   transform: perspective(400px)  /* 深さ */
             rotateX(45deg);     /* 角度 */

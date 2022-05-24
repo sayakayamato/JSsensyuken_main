@@ -1,0 +1,89 @@
+.opening{
+    height: 700px;
+    }
+    
+    li {
+        margin-top: 50px;
+        display: flex;
+        margin: 0 auto;
+        width: 800px;
+        height: 700px;
+        box-sizing: border-box;
+        box-shadow: 1px 2px 3px #bbb;
+        -webkit-perspective: 800px;
+        perspective: 800px;
+        background-color: #fff;
+    }
+    
+    .door-left, .door-right {
+        position: relative;
+        width: 50%;
+        height: 100%;
+        box-sizing: border-box;
+        z-index: 1;
+        transition: 1s ease-in;
+        /* background: linear-gradient(to bottom right, rgba(216,237,255,0.2) 0%, rgba(255,255,255,0.2) 50%, rgba(216,237,255,0.2) 100%); */
+        
+    }
+    
+    .door-left {
+        border: 0.5px solid #aaa;
+        background-image: url(../img/opening/161395434226983.jpeg);
+        background-size: cover;
+        transform-origin: left; /* マウスオーバーした時の回転軸をここで指定 */
+    }
+    
+    .door-right {
+        border: 0.5px solid #aaa;
+        background-image: url(../img/opening/161395434226983.jpeg);
+        background-size: cover;
+        transform-origin: right;
+    }
+    
+    
+    .name, .img-box {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .name {
+        padding: 2.5%;
+        box-sizing: border-box;
+        text-align: center;
+        font-size: 0.5em;
+        color: #666;
+        text-shadow: 0.5px 0.5px 0.5px #fff;
+        z-index: 2; /* 扉を開いても表示させる */
+    }
+    
+    
+    
+    .img-box {
+        opacity: 0.1;
+        transition: all 1s ease 0.5s;
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d; /* 子要素を3D空間 */
+    }
+    
+    img {
+        width: 100%; /* 画像は正方形に成形済み */
+        height: 100%;
+    }
+    
+    li:hover .door-left {
+        transform: rotate3d(0, 1, 0, -110deg); /* 扉の開く角度 */
+        transition: all 1s ease-in-out 0s;
+    }
+    
+    li:hover .door-right {
+        transform: rotate3d(0, 1, 0, 110deg);
+        transition: all 1s ease-in-out 0s;
+    }
+    
+    li:hover .img-box {
+        opacity: 10;
+    }
+    
