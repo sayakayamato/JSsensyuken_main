@@ -1,3 +1,4 @@
+//斜めスライダー
 document.addEventListener('DOMContentLoaded', function() {
     var parent = document.querySelector('.splitview'),
         topPanel = parent.querySelector('.top'),

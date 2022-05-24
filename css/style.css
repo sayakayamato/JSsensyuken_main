@@ -45,7 +45,9 @@ body{
     font-size: 50px;
     color: #fff;
     text-shadow: 10px 10px rgb(242, 120, 120);
-}
+    animation: slideIn 1s cubic-bezier(0.25, 1, 0.5, 1) 1 forwards;
+} 
+
 
 .bottoms{
     width: 100%;
@@ -230,7 +232,6 @@ body {
 
 .garary{
     border: 1px solid;
-    /* background-image: url(../img/marble-gae3677387_1280.jpg); */
     background-color: black;
     background-size: cover;
     overflow: hidden;
@@ -300,6 +301,24 @@ body {
     background-image: url(../img/museum-g2870471b0_1280.jpg);
     background-size: cover;
     overflow: scroll;
+    position: relative;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+#gallery{
+    width: 300px;
+    position: absolute;
+    top: 250px;
+    left: 35%;
+    z-index: 20;
+    font-size: 160px;
+    color: #fff;
+    font-family: 'Trattatello',sans-serif;
+
 }
 
 
@@ -309,6 +328,29 @@ body {
     height: 700px;
     background-image: url(../img/museum-g4ec896274_1280.jpg);
     background-size: cover;
+    position: relative;
+}
+
+.interactive_1::before{
+    content: '';
+    background-color: rgba(0,0,0,0.3);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+}
+
+#ar{
+    position: absolute;
+    top: 1200px;
+    left: 43%;
+    z-index: 20;
+    font-size: 160px;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Trattatello',sans-serif;
 }
 
 .interactive_2{
@@ -317,31 +359,51 @@ body {
     height: 700px;
     background-image: url(../img/cubes-gaa4e2d15f_1280.jpg);
     background-size: cover;
+    position: relative;
+}
+
+.interactive_2::before{
+    content: '';
+    background-color: rgba(0,0,0,0.3);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+}
+
+#game{
+    position: absolute;
+    top: 2250px;
+    left: 40%;
+    z-index: 20;
+    font-size: 160px;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Trattatello',sans-serif; 
 }
 
 .interactive_3{
-    margin-bottom: 300px;
     width: 100%;
     height: 700px;
-    /* background-image: url(../img/controller-gba13abf1a_1280.jpg); */
+    background-image: url(../img/contents_img/chess-gf13695422_1280.jpg);
     background-size: cover;
+    position: relative;
 }
 
-.interactive_4{
-    width: 100%;
-    height: 700px;
-    background-image: url(../img/exhibition-g97107e690_1280.jpg);
-    background-size: cover;
+.interactive_3::before{
+    content: '';
+    background-color: rgba(0,0,0,0.3);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
 }
 
-.button_wrap{
-    border: 1px solid;
-    width: 40%;
-    height: 600px;
-    margin: 30px;
-    border: 1px solid white;
-    text-align: center;
-}
+
 
 .button{
     text-align: center;
@@ -349,5 +411,15 @@ body {
 }
 
 footer{
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: #000000cc;
 }
+
+.twitter{
+    width: 100%;
+    height: 100%;
+    text-align: right;
+    padding-top: 30px;
+    padding-right: 30px;
+}
+
+
